@@ -1,4 +1,5 @@
 
+#include <cmath>
 #include <iostream>
 #include <set>
 #include <sstream>
@@ -45,6 +46,9 @@ int main() {
 					break;
 				case '/':
 					previous.value /= current.value;
+					break;
+				case '%':
+					previous.value = std::fmod(previous.value, current.value);
 					break;
 				}
 			}
